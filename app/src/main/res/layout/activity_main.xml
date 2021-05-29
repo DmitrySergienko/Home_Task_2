@@ -23,12 +23,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:text="@string/key_1"
             app:rippleColor="#9C9898" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:text="@string/key_2" />
 
         <Button
@@ -101,6 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
+            android:layout_marginRight="10dp"
             android:text="@string/equally" />
 
         <Button
