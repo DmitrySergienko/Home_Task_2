@@ -38,6 +38,7 @@
 
 
         <Button
+            android:id="@+id/key_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
@@ -45,75 +46,89 @@
             app:rippleColor="#9C9898" />
 
         <Button
+            android:id="@+id/key_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:text="@string/key_2" />
 
         <Button
+            android:id="@+id/key_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/key_3" />
 
         <Button
+            android:id="@+id/key_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/key_4" />
 
         <Button
+            android:id="@+id/key_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/key_5" />
 
         <Button
+            android:id="@+id/key_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/key_6" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/key_6" />
-
-        <Button
+            android:id="@+id/key_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/key_7" />
 
         <Button
+            android:id="@+id/key_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/key_8" />
 
         <Button
+            android:id="@+id/key_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/key_9" />
 
         <Button
+            android:id="@+id/key_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/key_0" />
 
         <Button
+            android:id="@+id/key_sum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/multiplication" />
+            android:text="@string/key_sum" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/division" />
-
-        <Button
+            android:id="@+id/key_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/key_subtraction" />
 
         <Button
+            android:id="@+id/key_division"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_sum" />
+            android:text="@string/division" />
+
+        <Button
+            android:id="@+id/key_multiplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/multiplication" />
+
+        <Button
+            android:id="@+id/key_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/key_percent" />
 
         <Button
             android:layout_width="wrap_content"
