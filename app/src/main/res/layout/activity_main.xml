@@ -42,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
+            android:onClick="onClick_key_1"
             android:text="@string/key_1"
             app:rippleColor="#9C9898" />
 
@@ -50,98 +51,116 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
-            android:text="@string/key_2" />
+            android:text="@string/key_2"
+            android:onClick="onClick_key_2"/>
 
         <Button
             android:id="@+id/key_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_3" />
+            android:text="@string/key_3"
+            android:onClick="onClick_key_3"/>
 
         <Button
             android:id="@+id/key_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_4" />
+            android:text="@string/key_4"
+            android:onClick="onClick_key_4"/>
 
         <Button
             android:id="@+id/key_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_5" />
+            android:text="@string/key_5"
+            android:onClick="onClick_key_5"/>
 
         <Button
             android:id="@+id/key_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_6" />
+            android:text="@string/key_6"
+            android:onClick="onClick_key_6"/>
 
         <Button
             android:id="@+id/key_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_7" />
+            android:text="@string/key_7"
+            android:onClick="onClick_key_7"/>
 
         <Button
             android:id="@+id/key_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_8" />
+            android:text="@string/key_8"
+            android:onClick="onClick_key_8"/>
 
         <Button
             android:id="@+id/key_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_9" />
+            android:text="@string/key_9"
+            android:onClick="onClick_key_9"/>
 
         <Button
             android:id="@+id/key_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_0" />
+            android:text="@string/key_0"
+            android:onClick="onClick_key_0"/>
 
         <Button
             android:id="@+id/key_sum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_sum" />
+            android:text="@string/key_sum"
+            android:onClick="onClick_key_sum"/>
 
         <Button
             android:id="@+id/key_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_subtraction" />
+            android:text="@string/key_subtraction"
+            android:onClick="onClick_key_subtraction"/>
 
         <Button
             android:id="@+id/key_division"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/division" />
+            android:text="@string/division"
+            android:onClick="onClick_key_division"/>
 
         <Button
             android:id="@+id/key_multiplication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/multiplication" />
+            android:text="@string/multiplication"
+            android:onClick="onClick_key_multiplication"/>
 
         <Button
             android:id="@+id/key_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_percent" />
+            android:text="@string/key_percent"
+            android:onClick="onClick_key_percent"/>
 
         <Button
+            android:id="@+id/key_equally"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
             android:layout_marginRight="10dp"
-            android:text="@string/equally" />
+            android:text="@string/equally"
+            android:onClick="onClick_key_equally"/>
 
         <Button
+            android:id="@+id/key_dot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_dot" />
+            android:text="@string/key_dot"
+            android:onClick="onClick_key_dot"/>
 
 
     </GridLayout>
