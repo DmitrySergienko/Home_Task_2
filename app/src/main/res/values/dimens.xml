@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="culc_text_view_width">300dp</dimen>
+    <dimen name="culc_text_view_height">60dp</dimen>
+    <dimen name="text_size">32sp</dimen>
+</resources>
