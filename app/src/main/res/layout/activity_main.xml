@@ -6,19 +6,36 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_background">
 
+    <TextView
+        android:layout_width="@dimen/culc_text_view_width"
+        android:layout_height="@dimen/culc_text_view_height"
+        android:layout_marginBottom="5dp"
+        android:background="@color/purple_500"
+        android:textSize="@dimen/text_size"
+        android:gravity="end"
+        android:text="1234"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
 
     <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+
+
         android:columnCount="3"
-
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
+
 
         <Button
             android:layout_width="wrap_content"
