@@ -6,21 +6,50 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_background">
 
-    <TextView
+    <EditText
+        android:id="@+id/numberField"
         android:layout_width="@dimen/culc_text_view_width"
         android:layout_height="@dimen/culc_text_view_height"
-        android:layout_marginBottom="5dp"
         android:background="@color/purple_500"
-        android:textSize="@dimen/text_size"
         android:gravity="end"
-        android:text="1234"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/operationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultView">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="@dimen/culc_text_view_width"
+        android:layout_height="@dimen/culc_text_view_height"
+        android:layout_marginTop="10dp"
+        android:background="@color/purple_500"
+        android:gravity="end"
+        android:textSize="@dimen/text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
 
+    <TextView
+        android:id="@+id/operationView"
+        android:layout_width="@dimen/culc_text_view_width"
+        android:layout_height="@dimen/culc_text_view_height"
+        android:layout_marginBottom="5dp"
+        android:background="@color/purple_500"
+        android:gravity="end"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </TextView>
 
     <GridLayout
         android:id="@+id/gridLayout"
@@ -42,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
-            android:onClick="onClick_key_1"
+            android:onClick="onNumberClick"
             android:text="@string/key_1"
             app:rippleColor="#9C9898" />
 
@@ -51,116 +80,109 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
-            android:text="@string/key_2"
-            android:onClick="onClick_key_2"/>
+            android:onClick="onNumberClick"
+            android:text="@string/key_2" />
 
         <Button
             android:id="@+id/key_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_3"
-            android:onClick="onClick_key_3"/>
+            android:onClick="onNumberClick"
+            android:text="@string/key_3" />
 
         <Button
             android:id="@+id/key_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_4"
-            android:onClick="onClick_key_4"/>
+            android:onClick="onNumberClick"
+            android:text="@string/key_4" />
 
         <Button
             android:id="@+id/key_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_5"
-            android:onClick="onClick_key_5"/>
+            android:onClick="onNumberClick"
+            android:text="@string/key_5" />
 
         <Button
             android:id="@+id/key_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_6"
-            android:onClick="onClick_key_6"/>
+            android:onClick="onNumberClick"
+            android:text="@string/key_6" />
 
         <Button
             android:id="@+id/key_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_7"
-            android:onClick="onClick_key_7"/>
+            android:onClick="onNumberClick"
+            android:text="@string/key_7" />
 
         <Button
             android:id="@+id/key_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_8"
-            android:onClick="onClick_key_8"/>
+            android:onClick="onNumberClick"
+            android:text="@string/key_8" />
 
         <Button
             android:id="@+id/key_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_9"
-            android:onClick="onClick_key_9"/>
+            android:onClick="onNumberClick"
+            android:text="@string/key_9" />
 
         <Button
             android:id="@+id/key_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_0"
-            android:onClick="onClick_key_0"/>
+            android:onClick="onNumberClick"
+            android:text="@string/key_0" />
 
         <Button
             android:id="@+id/key_sum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_sum"
-            android:onClick="onClick_key_sum"/>
+            android:onClick="onOperationClick"
+            android:text="@string/key_sum" />
 
         <Button
             android:id="@+id/key_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_subtraction"
-            android:onClick="onClick_key_subtraction"/>
+            android:onClick="onOperationClick"
+            android:text="@string/key_subtraction" />
 
         <Button
             android:id="@+id/key_division"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/division"
-            android:onClick="onClick_key_division"/>
+            android:onClick="onOperationClick"
+            android:text="@string/division" />
 
         <Button
             android:id="@+id/key_multiplication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/multiplication"
-            android:onClick="onClick_key_multiplication"/>
+            android:onClick="onOperationClick"
+            android:text="@string/multiplication" />
 
         <Button
             android:id="@+id/key_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/key_percent"
-            android:onClick="onClick_key_percent"/>
+            android:onClick="onOperationClick"
+            android:text="@string/key_dot" />
 
         <Button
             android:id="@+id/key_equally"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_columnSpan="2"
+            android:layout_columnSpan="3"
             android:layout_gravity="fill_horizontal"
-            android:layout_marginRight="10dp"
-            android:text="@string/equally"
-            android:onClick="onClick_key_equally"/>
 
-        <Button
-            android:id="@+id/key_dot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/key_dot"
-            android:onClick="onClick_key_dot"/>
+            android:onClick="onOperationClick"
+            android:text="@string/equally" />
 
 
     </GridLayout>
