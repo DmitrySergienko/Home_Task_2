@@ -8,23 +8,55 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
 public class MainActivity extends AppCompatActivity {
-    TextView resultField; // текстовое поле для вывода результата
-    EditText numberField; // поле для ввода числа
-    TextView operationField; //текстовое поле для вывода знака операции
-    Double operand = null; //операнд
-    String lastOperation = "="; //последняя операция
+
+    private Calculator calculator;
+
+    public static TextView resultField; // текстовое поле для вывода результата
+    public static EditText numberField; // поле для ввода числа
+    public static TextView operationField; //текстовое поле для вывода знака операции
+    public static Double operand = null; //операнд
+    public static String lastOperation = "="; //последняя операция
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        calculator = new Calculator();
+
         //получаем все поля по id
         resultField = (TextView) findViewById(R.id.resultView);
         numberField = (EditText) findViewById(R.id.numberField);
         operationField = (TextView) findViewById(R.id.operationView);
+    }
+    //обработка нажатия на кнопку
+    public void onNumberClick(View view) {
+        Button button = (Button) view;
+        numberField.append(button.getText());
+
+        if (lastOperation.equals("=") && operand != null) {
+            operand = null;
+        }
+    }
+    //обработка нажатия операции
+    public void onOperationClick(View view) {
+        //calculator = new Calculator();
+
+        Button button = (Button) view;
+        String op = button.getText().toString();
+        String number = numberField.getText().toString();
+        //если что-то введено
+        if (number.length() > 0) {
+            number = number.replace(',', '.');
+            try {
+                calculator.performOperation(Double.valueOf(number), op);
+            } catch (NumberFormatException ex) {
+                numberField.setText("");
+            }
+        }
+        MainActivity.lastOperation = op;
+        MainActivity.operationField.setText(MainActivity.lastOperation);
     }
 
     //сохраненме состояния
@@ -43,66 +75,5 @@ public class MainActivity extends AppCompatActivity {
         resultField.setText(operand.toString());
         operationField.setText(lastOperation);
     }
-
-    //обработка нажатия на кнопку
-    public void onNumberClick(View view) {
-        Button button = (Button) view;
-        numberField.append(button.getText());
-
-        if (lastOperation.equals("=") && operand != null) {
-            operand = null;
-        }
-    }
-
-    //обработка нажатия операции
-    public void onOperationClick(View view) {
-        Button button = (Button) view;
-        String op = button.getText().toString();
-        String number = numberField.getText().toString();
-        //если что-то введено
-        if (number.length() > 0) {
-            number = number.replace(',', '.');
-            try {
-                performOperation(Double.valueOf(number), op);
-            } catch (NumberFormatException ex) {
-                numberField.setText("");
-            }
-        }
-        lastOperation = op;
-        operationField.setText(lastOperation);
-    }
-
-    //операции
-    public void performOperation(Double number, String operation) {
-        //если операнд ранее не был установлен при вводе первой операции
-        if (operand == null) {
-            operand = number;
-        } else {
-            if (lastOperation.equals("=")) {
-                lastOperation = operation;
-            }
-            switch (lastOperation) {
-                case "=":
-                    operand = number;
-                    break;
-                case "/":
-                    if (number == 0) {
-                        operand = 0.0;
-                    } else {
-                        operand /= number;
-                    }
-                    break;
-                case "*":
-                    operand *= number;
-                    break;
-                case "+":
-                    operand += number;
-                    break;
-                case "-":
-                    operand -= number;
-            }
-        }
-        resultField.setText(operand.toString().replace('.', ','));
-        numberField.setText("");
-    }
 }
+
