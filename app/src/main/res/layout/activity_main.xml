@@ -17,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultView">
+        app:layout_constraintTop_toBottomOf="@+id/resultView"
+        style="@style/CustomStyle">
 
     </EditText>
 
@@ -31,7 +32,8 @@
         android:textSize="@dimen/text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/CustomStyle">
 
     </TextView>
 
@@ -47,7 +49,8 @@
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/CustomStyle">
 
     </TextView>
 
@@ -56,7 +59,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-
         android:columnCount="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +73,8 @@
             android:layout_marginRight="10dp"
             android:onClick="onNumberClick"
             android:text="@string/key_1"
-            app:rippleColor="#9C9898" />
+            app:rippleColor="#9C9898"
+            />
 
 
         <com.google.android.material.button.MaterialButton
