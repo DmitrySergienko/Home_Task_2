@@ -29,7 +29,16 @@ public class MainActivity extends AppCompatActivity {
         resultField = (TextView) findViewById(R.id.resultView);
         numberField = (EditText) findViewById(R.id.numberField);
         operationField = (TextView) findViewById(R.id.operationView);
+
+        //стереть запись
+        findViewById(R.id.key_coma).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resultField.setText("0.0");
+            }
+        });
     }
+
     //обработка нажатия на кнопку
     public void onNumberClick(View view) {
         Button button = (Button) view;
@@ -39,14 +48,13 @@ public class MainActivity extends AppCompatActivity {
             operand = null;
         }
     }
+
     //обработка нажатия операции
     public void onOperationClick(View view) {
-        //calculator = new Calculator();
-
         Button button = (Button) view;
         String op = button.getText().toString();
         String number = numberField.getText().toString();
-        //если что-то введено
+
         if (number.length() > 0) {
             number = number.replace(',', '.');
             try {
@@ -59,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.operationField.setText(MainActivity.lastOperation);
     }
 
-    //сохраненме состояния
+    //сохраняем состояния
     protected void onSaveInstanceState(Bundle outState) {
         outState.putString("OPERATION", lastOperation);
         if (operand != null)
@@ -74,6 +82,11 @@ public class MainActivity extends AppCompatActivity {
         operand = savedInstanceState.getDouble("OPERAND");
         resultField.setText(operand.toString());
         operationField.setText(lastOperation);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
 

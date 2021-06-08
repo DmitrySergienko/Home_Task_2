@@ -30,9 +30,10 @@ public class Calculator {
                     break;
                 case "-":
                     MainActivity.operand -= number;
+                    break;
             }
         }
-        MainActivity.resultField.setText(MainActivity.operand.toString().replace('.', ','));
+        MainActivity.resultField.setText(MainActivity.operand.toString().replace(',', '.'));
         MainActivity.numberField.setText("");
     }
 }
